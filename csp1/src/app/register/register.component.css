@@ -1,0 +1,22 @@
+.reg{
+  font-size: 30px;
+  color: blue;
+  text-align: center;
+  padding-bottom: 20px;
+  
+}
+.con{
+  padding: 50px;
+  text-align: center;
+}
+.em{
+  font-size: 30px;
+  color: blueviolet;
+  font-weight: solid;
+}
+.size{
+  border: solid 1px red;
+  padding: 10px;
+  width: 400px;
+  height: 10px;
+}

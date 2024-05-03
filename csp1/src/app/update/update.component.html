@@ -1,0 +1,53 @@
+<app-navbar></app-navbar>
+<div class="container py-5 h-90" >
+    <div class="row d-flex justify-content-center align-items-center h-100" style="padding-top: 100px;">
+      <div class="col">
+        <div class="card card-registration my-4">
+          <div class="row g-0">
+            <div class="col-xl-6 d-none d-xl-block">
+              <img src="assets\glass2.jpg"
+                alt="Sample photo" class="img-fluid"
+                style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
+            </div>
+            <div class="col-xl-6">
+              <div class="card-body p-md-5 text-black">
+<form  >
+    <div class="form-outline mb-4">
+      <input type="text" id="form3Example8" placeholder="ENTER YOUR ID NUMBER" name="idnumber" [(ngModel)]="User.idnumber" class="form-control form-control-lg" />
+    </div>
+    <button type="submit" class="btn btn-success btn-lg ms-2" (click)="Read()" >Submit form</button>
+    
+    <div class="form-outline mb-4">
+      <input type="text" id="form3Example8" placeholder="ENTER YOUR DD" name="dd" [(ngModel)]="User.dd" class="form-control form-control-lg" />
+    </div>
+    <div class="form-outline mb-4">
+      <input type="text" id="form3Example8" placeholder="ENTER YOUR FARMERNAME" name="farmername"  [(ngModel)]="User.Farmername" class="form-control form-control-lg" />
+    </div>
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="form-outline">
+          <input type="text" id="form3Example1m1" placeholder="ENTER YOUR Milkperday " name="milkperday" [(ngModel)]="User.Milkperday" class="form-control form-control-lg" />
+            </div>
+      </div>
+      <div class="col-md-6 mb-4">
+        <div class="form-outline">
+          <input type="text" id="form3Example1n1" placeholder="ENTER YOUR FAT QUANTITY" name="fatquantity" [(ngModel)]="User.Fatquantity"class="form-control form-control-lg" />
+        </div>
+      </div>
+    </div>
+
+   
+
+    
+
+    <div class="form-outline mb-4">
+      <input type="text" id="form3Example9" placeholder="ENTER YOUR COST GIVEN" name="costgiven" [(ngModel)]="User.Costgiven" class="form-control form-control-lg" />
+    </div>
+
+
+    <div class="d-flex justify-content-end pt-3">
+      <button type="button" class="btn btn-light btn-lg">Reset all</button>
+      <button type="submit" class="btn btn-success btn-lg ms-2" (click)="Update()" >Submit form</button>
+      {{this.SuccessMsg}}
+    </div>
+</form>

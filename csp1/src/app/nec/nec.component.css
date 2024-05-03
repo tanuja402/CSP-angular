@@ -1,0 +1,48 @@
+.bg-img{
+  text-align:center;
+}
+nav{
+   
+   border-top:20px;
+}
+h6 {
+  text-align: right;
+}
+.right{
+  text-align: right;
+
+}
+
+.bt{
+  text-align: right;
+}
+h4 {
+  
+  padding: 50px;
+ 
+  color: rgb(253, 251, 251);
+}
+h1{
+  font-size: 90px;
+}
+body{
+  background-image: url(https://images.shiksha.com/mediadata/images/1490772416php73GzFm.jpeg);
+background-size: cover;
+}
+.li {
+  text-align: right; 
+  
+}
+.btn1:hover{
+  border-color: rgb(8, 8, 8);
+  background-color: rgb(115, 248, 202);
+  color: white;
+}
+.btn1 {
+  border-width: 2px;
+  border-color: blue;
+  border-radius: 5px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+

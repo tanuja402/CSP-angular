@@ -1,0 +1,291 @@
+
+<!--
+<div class="par w-50 d-block mx-auto">
+<input type="text" [(ngModel)]="User.Idnumber" name="Idnumber" #Idnumber="ngModel" required ngModel>
+&nbsp;&nbsp;&nbsp;
+<button type="submit"  class="btn btn-success my-2" (click)="Read()" >GET</button>
+</div>
+<div *ngIf="canShowData">
+
+    <hr> 
+    
+    <table >
+        <tr>
+          <th colspan="10" style="text-align: center;"><h4>DAIRYMILK</h4></th>
+        </tr>
+        <tr>
+          <td colspan="4">Idnumber</td>
+          <td colspan="6">{{User.Idnumber}}</td>
+        </tr>
+        <tr>
+          <td colspan="4">dd</td>
+          <td colspan="6">{{User.dd}}</td>
+        </tr>
+        <tr>
+          <td colspan="4">Farmername</td>
+          <td colspan="6">{{User.Farmername}}</td>
+        </tr>
+        <tr>
+          <td colspan="4">Milkperday</td>
+          <td colspan="6">{{User.Milkperday}}</td>
+        </tr>
+        <tr>
+          <td colspan="4">Fatquantity</td>
+          <td colspan="6">{{User.Fatquantity}}</td>
+        </tr>
+        <tr>
+          <td colspan="4">Costgiven</td>
+          <td colspan="6">{{User.Costgiven}}</td>
+        </tr>
+        
+          
+        </table>
+  -->
+
+
+
+<!----
+<div class="d-block mx-auto w-50">
+    <label for="Idnumber">Idnumber</label>
+    <input type="text" name="Idnumber" id="Idnumber" class="form-control" [(ngModel)]="idnumber"
+        placeholder="Ex:123456..">
+    <div class="d-flex my-2">
+        <input type="submit" value="Get all" class="btn btn-primary" (click)="Read('All')">
+        <input type="submit" [value]="'Get '+ idnumber" class="btn btn-primary mx-1" (click)="Read(idnumber)">
+    </div>
+    <p *ngIf="!(Results.length!=0 && GotResult)" class="text-danger">No Result to Show</p>
+</div>
+<table class="table w-50  mx-auto" *ngIf="Results.length!=0 && GotResult">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Idnumber</th>
+            <th scope="col">dd</th>
+            <th scope="col">Farmername</th>
+            <th scope="col">Milkperday</th>
+            <th scope="col">Fatquantity</th>
+            <th scope="col">Costgiven</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let Data of Results">
+            <th scope="row">{{Data[0]}}</th>
+            <td>{{Data[1]}}</td>
+            <td>{{Data[2]}}</td>
+            <td>{{Data[3]}}</td>
+            <td>{{Data[4]}}</td>
+            <td>{{Data[5]}}</td>
+            
+            <td><input type="button" role="button" class="btn btn-danger" value="delete" (click)="Delete(Data[0])">
+            </td>
+            <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="idnumber= Data[0]">
+                    Update
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">UPDATED</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form >
+                <div class="mb-3 mx-5">
+                  <label for="exampleInputEmail1" class="form-label">Idnumber</label>
+                  <input type="text" name="Idnumber" id="Idnumber" class="form-control" [(ngModel)]="UpdatedUser.idnumber">
+                  
+                </div>
+                <div class="mb-1">
+                  <label for="exampleInputPassword1" class="form-label">dd</label>
+                  <input type="text" name="AADHAR" id="AADHAR" class="form-control" [(ngModel)]="UpdatedUser.dd">
+                </div>
+                <div class="mb-1">
+                    <label for="exampleInputPassword1" class="form-label">Farmername</label>
+                    <input type="text" name="AADHAR" id="AADHAR" class="form-control" [(ngModel)]="UpdatedUser.Farmername">
+                  </div>
+                  <div class="mb-1">
+                    <label for="exampleInputPassword1" class="form-label">Milkperday</label>
+                    <input type="text" name="AADHAR" id="AADHAR" class="form-control" [(ngModel)]="UpdatedUser.Milkperday">
+                  </div>
+                  <div class="mb-1">
+                    <label for="exampleInputPassword1" class="form-label">Fatquantity</label>
+                    <input type="text" name="AADHAR" id="AADHAR" class="form-control" [(ngModel)]="UpdatedUser.Fatquantity">
+                  </div>
+                  <div class="mb-1">
+                    <label for="exampleInputPassword1" class="form-label">Costgiven</label>
+                    <input type="text" name="AADHAR" id="AADHAR" class="form-control" [(ngModel)]="UpdatedUser.Costgiven">
+                  </div>
+                  
+
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary"  data-bs-dismiss="modal" (click)="Update(idnumber,UpdatedUser)">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+-->
+<app-navbar></app-navbar>
+<body>
+<div id="contain">
+<div class="d-block mx-auto w-50">
+  <label for="idnumber" style="font-size: 20px;color:black;font-weight: bold;">idnumber</label>
+  <input
+    type="string"
+    name="idnumber"
+    id="idnumber"
+    class="form-control"
+    [(ngModel)]="idnumber"
+  />
+  <div class="d-flex my-2">
+    <input
+      type="submit"
+      value="Get all"
+      class="btn btn-primary"
+      (click)="Read('All')"
+    />
+    <input
+      type="submit"
+      [value]="'Get ' + idnumber"
+      class="btn btn-primary mx-1"
+      (click)="Read(idnumber)"
+    />
+  </div>
+  <p *ngIf="!(Results.length != 0 && GotResult)" class="text-danger">
+    No Result to Show
+  </p>
+</div>
+<table class="table w-50 mx-auto" *ngIf="Results.length != 0 && GotResult">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">idnumber</th>
+      <th scope="col">dd</th>
+      <th scope="col">Farmername</th>
+      <th scope="col">Milkperday</th>
+      <th scope="col">Fatquantity</th>
+      <th scope="col">Costgiven</th>
+
+      <th scope="col">Delete</th>
+      <th scope="col">Update</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let Data of Results">
+      <th scope="row">{{ Data[0] }}</th>
+      <td>{{ Data[1] }}</td>
+      <td>{{ Data[2] }}</td>
+      <td>{{ Data[3] }}</td>
+      <td>{{ Data[4] }}</td>
+      <td>{{Data[5]}}</td>
+      <td>
+        <input
+          type="button"
+          role="button"
+          class="btn btn-danger"
+          value="delete"
+          (click)="Delete(Data[0])"
+        />
+      </td>
+      <td>
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+          (click)="Read1(Data[0])"
+        >
+          Update
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Updated Values</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <input
+          type="text"
+          name="Id_No"
+          id="Id_No"
+          placeholder="Id_No"
+          class="form-control my-1"
+          [(ngModel)]="UpdatedUser.idnumber"
+        />
+        <input
+          type="text"
+          name="Name"
+          id="Name"
+          placeholder="Name"
+          class="form-control my-1"
+          [(ngModel)]="UpdatedUser.dd"
+        />
+        <input
+          type="text"
+          name="Instock"
+          id="Instock"
+          placeholder="Instock"
+          class="form-control my-1"
+          [(ngModel)]="UpdatedUser.Farmername"
+        />
+        <input
+          type="text"
+          name="ExpDate"
+          id="ExpDate"
+          placeholder="ExpDate"
+          class="form-control my-1"
+          [(ngModel)]="UpdatedUser.Milkperday"
+        />
+        <input
+          type="text"
+          name="ExpDate"
+          id="ExpDate"
+          placeholder="ExpDate"
+          class="form-control my-1"
+          [(ngModel)]="UpdatedUser.Fatquantity"
+        />
+        <input
+          type="text"
+          name="ExpDate"
+          id="ExpDate"
+          placeholder="ExpDate"
+          class="form-control my-1"
+          [(ngModel)]="UpdatedUser.Costgiven"
+        />
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-dismiss="modal"
+          (click)="Update(idnumber, UpdatedUser)"
+        >
+          Save changes
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>

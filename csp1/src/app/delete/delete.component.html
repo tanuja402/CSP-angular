@@ -1,0 +1,12 @@
+<app-navbar></app-navbar><form>
+    <div class="message">
+        <div class="alert alert-success my-2" *ngIf="!(SuccessMsg =='')">{{SuccessMsg}}</div>
+        <div class="alert alert-danger my-2" *ngIf="!(ErrorMsg =='')">{{ErrorMsg}}</div>
+        </div>
+    <div class="para w-50 d-block mx-auto ">
+    <input type="text" name="Idnumber"  [(ngModel)]="User.idnumber">
+    &nbsp;&nbsp;&nbsp;
+    <input type="submit" value="Delete" class="btn btn-danger" (click)="Delete()">&nbsp;&nbsp;
+    </div>
+
+</form>
